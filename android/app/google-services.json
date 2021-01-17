@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "438907947233",
+      "project_id": "smartshare-b34bf",
+      "storage_bucket": "smartshare-b34bf.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:438907947233:android:f2d62981db21bdecc04fa0",
+          "android_client_info": {
+            "package_name": "com.smartshare"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "438907947233-otsb1qurn2u57jmeer703a8gab6tsuk9.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDVME3gMY15tmL8Tw5qZ_yMlGJzWu0gnQM"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "438907947233-otsb1qurn2u57jmeer703a8gab6tsuk9.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
