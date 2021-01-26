@@ -37,8 +37,6 @@ const App = () => {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
-  const [username, setUserName] = useState('');
-  const [password, setPassword] = useState('');
 
   // Handle user state changes
   const onAuthStateChanged = (user: any) => {
@@ -58,24 +56,8 @@ const App = () => {
   }
 
   if (!user) {
-
-    const signUp = () => {
-      console.log(`login button pressed username: ${username} password: ${password}`);
-      auth().createUserWithEmailAndPassword(username, password).then(() => {
-        console.log('user created');
-      }).catch(() => {
-        console.log('Cannot create user');
-      })
-    };
     return (
-      <View>
-        <Text>Login</Text>
-        <View>
-          <TextInput value={username} onChangeText={text => setUserName(text)}></TextInput>
-          <TextInput value={password} onChangeText={text => setPassword(text)}></TextInput>
-        </View>
-        <Button title="SignUp" onPress={signUp}/>
-      </View>
+      <Register/>
     );
   }
   return (<Register/>);

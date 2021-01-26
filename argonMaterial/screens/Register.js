@@ -10,10 +10,29 @@ import { Block, Checkbox, Text, theme } from "galio-framework";
 
 import { Button, Icon, Input } from "../components";
 import { Images, argonTheme } from "../constants";
+import auth from '@react-native-firebase/auth';
 
 const { width, height } = Dimensions.get("screen");
 
 class Register extends React.Component {
+  userInpObj = {
+    userName: '',
+    email: '',
+    password: ''
+  };
+
+  signUp() {
+    auth().createUserWithEmailAndPassword(this.userInpObj.email, this.userInpObj.password).then(() => {
+      console.log('user created');
+    }).catch(() => {
+      console.log('Cannot create user');
+    })
+  };
+
+  onTextInput (inputType, inputValue) {
+    console.log(`${inputType} : ${inputValue}`);
+    this.userInpObj[inputType] = inputValue;
+  }
   render() {
     return (
       <Block flex middle>
@@ -69,6 +88,7 @@ class Register extends React.Component {
                   >
                     <Block width={width * 0.8} style={{ marginBottom: 15 }}>
                       <Input
+                        onChangeText={(text) => this.onTextInput('userName', text)}
                         borderless
                         placeholder="Name"
                         iconContent={
@@ -84,6 +104,7 @@ class Register extends React.Component {
                     </Block>
                     <Block width={width * 0.8} style={{ marginBottom: 15 }}>
                       <Input
+                        onChangeText={(text) => this.onTextInput('email', text)}
                         borderless
                         placeholder="Email"
                         iconContent={
@@ -99,6 +120,7 @@ class Register extends React.Component {
                     </Block>
                     <Block width={width * 0.8}>
                       <Input
+                        onChangeText={(text) => this.onTextInput('password', text)}
                         password
                         borderless
                         placeholder="Password"
@@ -142,7 +164,7 @@ class Register extends React.Component {
                       </Button>
                     </Block>
                     <Block middle>
-                      <Button color="primary" style={styles.createButton}>
+                      <Button color="primary" style={styles.createButton} onPress={() => this.signUp()}>
                         <Text bold size={14} color={argonTheme.COLORS.WHITE}>
                           CREATE ACCOUNT
                         </Text>
