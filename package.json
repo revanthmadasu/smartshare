@@ -10,10 +10,29 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@react-native-firebase/app": "^10.4.0",
+    "@react-native-firebase/app": "^10.5.0",
+    "@react-native-firebase/auth": "^10.5.1",
+    "@react-navigation/native": "^5.9.2",
     "@tensorflow/tfjs-react-native": "^0.5.0",
+    "galio-framework": "^0.7.1",
     "react": "16.13.1",
-    "react-native": "0.63.4"
+    "react-native": "0.63.4",
+    "react-native-vector-icons": "^8.0.0",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/bottom-tabs": "^5.0.6",
+    "@react-navigation/compat": "^5.0.0",
+    "@react-navigation/drawer": "5.0.0",
+    "@react-navigation/stack": "5.0.0",
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-modal-dropdown": "git+https://github.com/siemiatj/react-native-modal-dropdown.git",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "~2.10.1",
+    "@use-expo/font": "^2.0.0",
+    "expo": "^39.0.0",
+    "expo-asset": "~8.2.0",
+    "expo-font": "~8.3.0",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
