@@ -57,7 +57,7 @@ class Register extends React.Component {
                         color={"black"}
                         style={{ marginTop: 2, marginRight: 5 }}
                       />
-                      <Text style={styles.socialTextButtons}>GITHUB</Text>
+                      <Text style={styles.socialTextButtons}>Facebook</Text>
                     </Block>
                   </Button>
                   <Button style={styles.socialButtons}>
