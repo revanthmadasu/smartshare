@@ -61,7 +61,7 @@ const App = () => {
       <Register/>
     );
   }
-  return (<Register/>);
+  return (<Profile/>);
 };
 
 const styles = StyleSheet.create({
