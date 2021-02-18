@@ -52,14 +52,18 @@ buck-out
 .watchmanconfig
 
 # Android
-# .idea
-# .gradle
-# local.properties
-# *.iml
-# /android/
+.idea
+.gradle
+local.properties
+*.iml
+/android/
+/android/app/build/generated/
+# android binary files
+.bin
+.lock
 
 # Node
-node_modules
+/node_modules
 *.log
 .nvm
 /bots/node_modules/
@@ -110,10 +114,3 @@ package-lock.json
 
 # Android memory profiler files
 *.hprof
-
-# # Node
-# node_modules
-# *.log
-# .nvm
-# /bots/node_modules/
-# package-lock.json
